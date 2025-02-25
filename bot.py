@@ -11,7 +11,7 @@ bot = telebot.TeleBot(token=TOKEN)
 # Handle '/start' and '/help'
 @bot.message_handler(commands=['help', 'start'])
 def send_welcome(message):
-    bot.send_message(message.chat.id, 'Привет! Я бот, который генерирует изображение по запросу. Введи /generate и запрос, по которому будет сгенерировано изображение.')
+    bot.send_message(message.chat.id, 'Yo! To generate image type /generate (request). Example /generate black men fight with coconuts')
 
 @bot.message_handler(commands=['generate'])
 def generate_image(message):
